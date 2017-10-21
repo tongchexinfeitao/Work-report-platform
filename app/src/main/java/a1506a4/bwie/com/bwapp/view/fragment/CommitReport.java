@@ -1,6 +1,7 @@
 package a1506a4.bwie.com.bwapp.view.fragment;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,6 +13,9 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import a1506a4.bwie.com.bwapp.R;
+import a1506a4.bwie.com.bwapp.view.activity.ReprotActivity;
+
+import static android.R.attr.type;
 
 /**
  * 作者: 赵虔
@@ -44,6 +48,8 @@ public class CommitReport extends Fragment implements View.OnClickListener {
         meetingReport = (Button) view.findViewById(R.id.meetingReport);
         actionReport = (Button) view.findViewById(R.id.actionReport);
         dayReport.setOnClickListener(this);
+        meetingReport.setOnClickListener(this);
+        actionReport.setOnClickListener(this);
     }
 
     //日常例会弹出的类型选择dialog
@@ -55,7 +61,9 @@ public class CommitReport extends Fragment implements View.OnClickListener {
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
                         String type = types[which];
-                        Toast.makeText(getContext(), "which:" + type, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getActivity(), ReprotActivity.class);
+                        intent.putExtra("type", type);
+                        startActivity(intent);
                     }
                 })
                 .show();
@@ -68,10 +76,14 @@ public class CommitReport extends Fragment implements View.OnClickListener {
                 showDialog();
                 break;
             case R.id.meetingReport://例会汇报
-
+                Intent intent = new Intent(getActivity(), ReprotActivity.class);
+                intent.putExtra("type", "会议");
+                startActivity(intent);
                 break;
             case R.id.actionReport://活动汇报
-
+                Intent intent2 = new Intent(getActivity(), ReprotActivity.class);
+                intent2.putExtra("type", "会议");
+                startActivity(intent2);
                 break;
         }
     }
