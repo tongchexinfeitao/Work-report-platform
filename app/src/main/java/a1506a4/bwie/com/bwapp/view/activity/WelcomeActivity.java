@@ -6,14 +6,17 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
 import java.util.concurrent.TimeUnit;
 
+import a1506a4.bwie.com.bwapp.BuildConfig;
 import a1506a4.bwie.com.bwapp.R;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -52,7 +55,6 @@ public class WelcomeActivity extends Activity {
 
                     @Override
                     public void onNext(Long value) {
-                        //Log.e(TAG, "onNext: ");
                         startAnim();
                     }
 
@@ -71,11 +73,11 @@ public class WelcomeActivity extends Activity {
 
     private void startAnim() {
 
-        ObjectAnimator animatorX = ObjectAnimator.ofFloat(mIVEntry, "scaleX", 1f, 1.15f);
-        ObjectAnimator animatorY = ObjectAnimator.ofFloat(mIVEntry, "scaleY", 1f, 1.15f);
+        ObjectAnimator animatorX = ObjectAnimator.ofFloat(mIVEntry, "scaleX", 1f, 1.3f);
+        ObjectAnimator animatorY = ObjectAnimator.ofFloat(mIVEntry, "scaleY", 1f, 1.3f);
 
         AnimatorSet set = new AnimatorSet();
-        set.setDuration(3000).play(animatorX).with(animatorY);
+        set.setDuration(1500).play(animatorX).with(animatorY);
         set.start();
 
         set.addListener(new AnimatorListenerAdapter() {

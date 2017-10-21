@@ -1,9 +1,11 @@
 package a1506a4.bwie.com.bwapp.view.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import java.util.ArrayList;
@@ -17,6 +19,9 @@ import a1506a4.bwie.com.bwapp.view.fragment.PunchFragment;
 import a1506a4.bwie.com.bwapp.view.fragment.ReportFragment;
 import a1506a4.bwie.com.bwapp.view.widget.NoScrollViewPager;
 
+import static a1506a4.bwie.com.bwapp.R.color.firebrick;
+import static a1506a4.bwie.com.bwapp.R.color.gray;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_punch_clock;
@@ -29,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         setContentView(R.layout.activity_main);
         initView();
 

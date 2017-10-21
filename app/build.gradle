@@ -26,23 +26,15 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    testCompile 'junit:junit:4.12'
-    //	Logger
     compile 'com.orhanobut:logger:+'
-    //Retrofit
     compile 'com.squareup.retrofit2:retrofit:+'
     compile 'com.squareup.retrofit2:converter-gson:+'
     compile 'com.squareup.retrofit2:adapter-rxjava2:+'
-    //	RxJava2
     compile 'io.reactivex.rxjava2:rxjava:+'
     compile 'io.reactivex.rxjava2:rxandroid:+'
-    //	interceptor 拦截器
     compile 'com.squareup.okhttp3:logging-interceptor:+'
-    //glide
     compile 'com.github.bumptech.glide:glide:+'
-
-    //找控件
     compile 'com.jakewharton:butterknife:8.8.1'
+    testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-
 }
