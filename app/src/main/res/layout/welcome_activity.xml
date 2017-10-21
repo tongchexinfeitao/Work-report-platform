@@ -22,9 +22,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center"
-        android:text="1506A精英四组"
+        android:text="移动1506A精英团队开发"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="22sp" />
 
