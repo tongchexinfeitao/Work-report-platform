@@ -4,11 +4,54 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <a1506a4.bwie.com.bwapp.view.widget.NoScrollViewPager
-        android:id="@+id/viewpager"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1">
+
+        <a1506a4.bwie.com.bwapp.view.widget.NoScrollViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:id="@+id/networkLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:background="#e8acac"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/jinggao"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/jinggao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/jinggao"
+                android:text="网络不给力,请检查网络设置."
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="#e8acac"
+                android:src="@mipmap/a6b" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 
     <RadioGroup
         android:layout_width="match_parent"

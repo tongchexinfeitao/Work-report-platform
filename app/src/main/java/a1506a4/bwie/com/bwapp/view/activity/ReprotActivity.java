@@ -50,7 +50,7 @@ public class ReprotActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.firebrick));
         setContentView(R.layout.activity_reprot);
         initView();
         //跳转传过来的标题
