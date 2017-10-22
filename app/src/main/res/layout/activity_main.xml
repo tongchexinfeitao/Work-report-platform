@@ -19,8 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="40dp"
-            android:background="#e8acac"
-            android:visibility="gone">
+            android:background="#e8a5a5">
 
             <ImageView
                 android:id="@+id/jinggao"
@@ -52,10 +51,15 @@
 
     </RelativeLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#545151" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="55dp"
         android:background="#F1F1F9"
         android:gravity="center"
         android:orientation="horizontal"
@@ -67,10 +71,14 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:background="@drawable/daka_selector"
             android:button="@null"
-            android:checked="true" />
+            android:checked="true"
+            android:drawableTop="@drawable/daka_selector"
+            android:gravity="center"
+            android:text="打卡"
+            android:textColor="#ff0000" />
 
         <RadioButton
             android:id="@+id/btn_report"
@@ -78,9 +86,13 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:background="@drawable/huibao_selector"
-            android:button="@null" />
+            android:button="@null"
+            android:drawableTop="@drawable/huibao_selector"
+            android:gravity="center"
+            android:text="汇报"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/btn_notification"
@@ -88,9 +100,13 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:background="@drawable/tongzhi_selector"
-            android:button="@null" />
+            android:button="@null"
+            android:drawableTop="@drawable/tongzhi_selector"
+            android:gravity="center"
+            android:text="通知"
+            android:textColor="#000000" />
 
         <RadioButton
             android:id="@+id/btn_mine"
@@ -98,8 +114,12 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="2dp"
             android:layout_weight="1"
-            android:background="@drawable/wode_selector"
-            android:button="@null" />
+            android:button="@null"
+            android:drawableTop="@drawable/wode_selector"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="#000000" />
     </RadioGroup>
 </LinearLayout>

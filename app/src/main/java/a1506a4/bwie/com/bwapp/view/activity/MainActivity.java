@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
@@ -18,6 +20,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static final int SET_NETWORK_REQUEST = 106;
     private RelativeLayout networkLayout;
     private SharedPreferences networkSP;
+    private RadioGroup radioGroup;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -69,6 +74,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //注册监听网络状态的广播
         IntentFilter intent = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
         this.registerReceiver(new NetworkBroadcastReceiver(), intent);
+
+        //设置radioGroup监听,选中的radioButton颜色变红
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+                for (int i = 0; i < radioGroup.getChildCount(); i++) {
+                    RadioButton button = (RadioButton) radioGroup.getChildAt(i);
+                    if (button.isChecked()) {
+                        button.setTextColor(Color.RED);
+                    } else {
+                        button.setTextColor(Color.BLACK);
+                    }
+                }
+            }
+        });
 
     }
 
@@ -121,6 +141,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewpager = (NoScrollViewPager) findViewById(R.id.viewpager);
         //没有网络的时候显示的提示栏
         networkLayout = (RelativeLayout) findViewById(R.id.networkLayout);
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
         btn_notification.setOnClickListener(this);
         btn_report.setOnClickListener(this);
         btn_punch_clock.setOnClickListener(this);
