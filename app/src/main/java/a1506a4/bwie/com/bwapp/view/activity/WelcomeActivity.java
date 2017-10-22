@@ -34,6 +34,7 @@ public class WelcomeActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_welcome);
         mIVEntry = (ImageView) findViewById(R.id.iv_entry);
         // Random random = new Random();
