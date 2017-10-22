@@ -22,7 +22,7 @@ public class SelectReport extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = View.inflate(getContext(), R.layout.selectreport_fragment, null);
+        view = View.inflate(getContext(), R.layout.select_report_fragment, null);
         return view;
     }
 }

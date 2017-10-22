@@ -8,9 +8,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:text="以下是查询的结果:"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
     <ListView
         android:id="@+id/listview"

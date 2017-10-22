@@ -6,16 +6,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="62dp"
         android:background="@color/firebrick">
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="10dp"
             android:text="汇报"
             android:textColor="#f4eeee"
             android:textSize="25sp"
@@ -24,45 +22,42 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="5dp">
+        android:layout_height="1dp"
+        android:background="#000000" />
 
-        <Button
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <RadioButton
             android:id="@+id/reportButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
-            android:background="@drawable/buttonborder"
+            android:background="@drawable/report_button"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
             android:text="汇报"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
 
-        <Button
+        <RadioButton
             android:id="@+id/selectButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
-            android:background="@drawable/buttonborder"
+            android:background="@drawable/report_button"
+            android:button="@null"
+            android:gravity="center"
             android:text="查询汇报"
-            android:textSize="25sp" />
-    </LinearLayout>
+            android:textSize="22sp" />
+    </RadioGroup>
 
-    <!-- <fragment
-         android:id="@+id/report"
-         android:name="a1506a4.bwie.com.bwapp.view.fragment.CommitReport"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent" />
-
-     <fragment
-         android:id="@+id/selectReport"
-         android:name="a1506a4.bwie.com.bwapp.view.fragment.SelectReport"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent" />-->
     <FrameLayout
         android:id="@+id/fragments"
         android:layout_width="match_parent"

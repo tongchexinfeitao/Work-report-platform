@@ -6,17 +6,14 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
 import java.util.concurrent.TimeUnit;
 
-import a1506a4.bwie.com.bwapp.BuildConfig;
 import a1506a4.bwie.com.bwapp.R;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -37,7 +34,7 @@ public class WelcomeActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.welcome_activity);
+        setContentView(R.layout.activity_welcome);
         mIVEntry = (ImageView) findViewById(R.id.iv_entry);
         // Random random = new Random();
 //        int i = random.nextInt(2);

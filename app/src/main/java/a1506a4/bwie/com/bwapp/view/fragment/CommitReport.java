@@ -10,12 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import a1506a4.bwie.com.bwapp.R;
 import a1506a4.bwie.com.bwapp.view.activity.ReprotActivity;
-
-import static android.R.attr.type;
 
 /**
  * 作者: 赵虔
@@ -33,7 +30,7 @@ public class CommitReport extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = View.inflate(getContext(), R.layout.commitreport_fragment, null);
+        view = View.inflate(getContext(), R.layout.commit_report_fragment, null);
         return view;
     }
 
@@ -62,6 +59,7 @@ public class CommitReport extends Fragment implements View.OnClickListener {
                         dialog.dismiss();
                         String type = types[which];
                         Intent intent = new Intent(getActivity(), ReprotActivity.class);
+                        intent.putExtra("title", dayReport.getText());
                         intent.putExtra("type", type);
                         startActivity(intent);
                     }
@@ -77,11 +75,13 @@ public class CommitReport extends Fragment implements View.OnClickListener {
                 break;
             case R.id.meetingReport://例会汇报
                 Intent intent = new Intent(getActivity(), ReprotActivity.class);
+                intent.putExtra("title", meetingReport.getText());
                 intent.putExtra("type", "会议");
                 startActivity(intent);
                 break;
             case R.id.actionReport://活动汇报
                 Intent intent2 = new Intent(getActivity(), ReprotActivity.class);
+                intent2.putExtra("title", actionReport.getText());
                 intent2.putExtra("type", "会议");
                 startActivity(intent2);
                 break;

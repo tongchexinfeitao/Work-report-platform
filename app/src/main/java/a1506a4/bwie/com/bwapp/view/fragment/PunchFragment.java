@@ -61,10 +61,10 @@ public class PunchFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.Travel://出差打卡
-                Toast.makeText(getActivity(), "出差打卡——>成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "打卡→成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.onAndOffDuty://上下班打卡
-                Toast.makeText(getActivity(), "上下班打卡——>成功", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "打卡→成功", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
