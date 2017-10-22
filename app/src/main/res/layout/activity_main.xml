@@ -10,37 +10,53 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="40dp"
+        android:background="#F1F1F9"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
 
-        <Button
+        <RadioButton
             android:id="@+id/btn_punch_clock"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="打卡" />
+            android:background="@drawable/daka_selector"
+            android:button="@null"
+            android:checked="true" />
 
-        <Button
+        <RadioButton
             android:id="@+id/btn_report"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="汇报" />
+            android:background="@drawable/huibao_selector"
+            android:button="@null" />
 
-        <Button
+        <RadioButton
             android:id="@+id/btn_notification"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="通知" />
+            android:background="@drawable/tongzhi_selector"
+            android:button="@null" />
 
-        <Button
+        <RadioButton
             android:id="@+id/btn_mine"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:text="我的" />
-    </LinearLayout>
+            android:background="@drawable/wode_selector"
+            android:button="@null" />
+    </RadioGroup>
 </LinearLayout>

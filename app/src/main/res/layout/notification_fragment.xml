@@ -13,8 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:text="通知"
             android:textColor="@color/white"
             android:textSize="25sp"
@@ -27,7 +26,9 @@
             android:padding="5dp"
             android:text="全选"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
+        <!--android:textColor="@drawable/select_all_selector"-->
+
     </RelativeLayout>
 
     <LinearLayout
@@ -36,37 +37,43 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-       <CheckBox
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="区域经理A"/>
-       <CheckBox
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="区域经理B"/>
-       <CheckBox
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="区域经理C"/>
-       <CheckBox
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:text="区域经理D"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="区域经理A" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="区域经理B" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="区域经理C" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="区域经理D" />
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="发送"/>
+            android:text="发送" />
+
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="逐级发送"/>
+            android:text="逐级发送" />
     </LinearLayout>
 </LinearLayout>

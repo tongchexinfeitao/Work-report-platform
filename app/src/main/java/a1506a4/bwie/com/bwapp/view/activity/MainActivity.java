@@ -1,18 +1,18 @@
 package a1506a4.bwie.com.bwapp.view.activity;
 
 import android.content.pm.PackageManager;
-import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.WindowManager;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.wxn.locationutil.LocationUtil;
 import com.wxn.locationutil.PermissionUtil;
 
 import java.util.ArrayList;
@@ -27,10 +27,6 @@ import a1506a4.bwie.com.bwapp.view.fragment.PunchFragment;
 import a1506a4.bwie.com.bwapp.view.fragment.ReportFragment;
 import a1506a4.bwie.com.bwapp.view.widget.NoScrollViewPager;
 
-import static a1506a4.bwie.com.bwapp.R.color.firebrick;
-import static a1506a4.bwie.com.bwapp.R.color.gray;
-import static com.baidu.location.h.k.P;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btn_punch_clock;
@@ -40,10 +36,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private NoScrollViewPager viewpager;
     private List<Fragment> list;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.firebrick));
         setContentView(R.layout.activity_main);
         initView();
 
