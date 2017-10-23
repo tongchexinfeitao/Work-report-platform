@@ -1,7 +1,6 @@
 package a1506a4.bwie.com.bwapp.view.fragment;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,22 +15,20 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+import a1506a4.bwie.com.bwapp.app.MyApplication;
+import a1506a4.bwie.com.bwapp.model.utils.LocationUtil;
+import a1506a4.bwie.com.bwapp.model.utils.PermissionManager;
+import a1506a4.bwie.com.bwapp.view.MyCircleView;
 
 import a1506a4.bwie.com.bwapp.R;
-import a1506a4.bwie.com.bwapp.app.MyApplication;
-import a1506a4.bwie.com.bwapp.view.MyCircleView;
-import a1506a4.bwie.com.bwapp.view.activity.MainActivity;
 
 import static a1506a4.bwie.com.bwapp.view.activity.MainActivity.NETWORK_STATE_BOOLEAN;
 import static a1506a4.bwie.com.bwapp.view.activity.MainActivity.NETWORK_STATE_NAME;
 import static android.content.Context.MODE_PRIVATE;
-import static com.baidu.location.h.k.s;
 
 /**
  * Created by Shadow on 2017/10/13.
@@ -64,7 +61,7 @@ public class PunchFragment extends Fragment implements View.OnClickListener {
         circleViewRight.setText("出差打卡");
 
         //查看是否获得定位的权限
-        canLocation = PermissionUtil.CanLocation(getActivity());
+        canLocation = PermissionManager.CanLocation(getActivity());
         //检查网络并获取定位的位置
         checkNewwork();
     }

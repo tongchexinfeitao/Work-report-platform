@@ -25,12 +25,12 @@ import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.wxn.locationutil.PermissionUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import a1506a4.bwie.com.bwapp.R;
+import a1506a4.bwie.com.bwapp.model.utils.PermissionManager;
 import a1506a4.bwie.com.bwapp.view.adapter.MyViewPagerAdapter;
 import a1506a4.bwie.com.bwapp.view.fragment.MineFragment;
 import a1506a4.bwie.com.bwapp.view.fragment.NotificationFragment;
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             // requestCode即所声明的权限获取码，在checkSelfPermission时传入
-            case PermissionUtil.LOCATION_REQUEST_CODE:
+            case PermissionManager.LOCATION_REQUEST_CODE:
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // 第一次获取到权限，请求定位
                     Toast.makeText(this, "定位中...", Toast.LENGTH_SHORT).show();
