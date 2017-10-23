@@ -21,8 +21,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.wxn.locationutil.LocationUtil;
-import com.wxn.locationutil.PermissionUtil;
+
 
 import a1506a4.bwie.com.bwapp.R;
 import a1506a4.bwie.com.bwapp.app.MyApplication;
