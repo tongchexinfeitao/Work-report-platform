@@ -2,20 +2,17 @@ package a1506a4.bwie.com.bwapp.view.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import a1506a4.bwie.com.bwapp.R;
-
-import static android.R.attr.name;
-import static android.R.attr.type;
 
 public class ReprotActivity extends AppCompatActivity implements View.OnClickListener {
     private final String[] types = {"咨询", "讲座", "招聘", "出差", "家访", "帮扶", "会议"};
@@ -59,6 +56,7 @@ public class ReprotActivity extends AppCompatActivity implements View.OnClickLis
         String Intent_type = getIntent().getStringExtra("type");
         //设置标题内容
         this.title.setText(Intent_title + "→" + Intent_type);
+        //判断你传过来的类型是什么?然后设置页面提输入的内容
         for (int i = 0; i < types.length; i++) {
             if (Intent_type.equals(types[i])) {
                 strings = list.get(i);
@@ -116,12 +114,7 @@ public class ReprotActivity extends AppCompatActivity implements View.OnClickLis
         name4 = (TextView) findViewById(R.id.name4);
         name5 = (TextView) findViewById(R.id.name5);
         name6 = (TextView) findViewById(R.id.name6);
-        /*LinearLayout layout0 = (LinearLayout) findViewById(R.id.layout0);
-        LinearLayout layout1 = (LinearLayout) findViewById(R.id.layout1);
-        LinearLayout layout2 = (LinearLayout) findViewById(R.id.layout2);
-        LinearLayout layout3 = (LinearLayout) findViewById(R.id.layout3);
-        LinearLayout layout4 = (LinearLayout) findViewById(R.id.layout4);
-        LinearLayout layout5 = (LinearLayout) findViewById(R.id.layout5);*/
+
         layout6 = (LinearLayout) findViewById(R.id.layout6);
     }
 
@@ -129,11 +122,50 @@ public class ReprotActivity extends AppCompatActivity implements View.OnClickLis
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.commit://提交
-
+                String content = commitContent();
+                //判断得到的输入框的字符串不为空的时候调接口上传信息
+                if (!(TextUtils.isEmpty(content))) {
+                    Toast.makeText(this, content, Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.gouBack://返回
                 finish();
                 break;
         }
+    }
+
+    //得到输入框的内容
+    private String commitContent() {
+        String content = null;
+        //判断type传过来的类型是哪个,然后根据类型来设置要显示输入框的个数
+        if (strings.length == types.length - 1) {//6个内容
+            String text0 = content0.getText().toString().trim();
+            String text1 = content1.getText().toString().trim();
+            String text2 = content2.getText().toString().trim();
+            String text3 = content3.getText().toString().trim();
+            String text4 = content4.getText().toString().trim();
+            String text5 = content5.getText().toString().trim();//备注输入框
+            //判空的时候不判断备注,因为备注不是必填的
+            if (TextUtils.isEmpty(text0) || TextUtils.isEmpty(text1) || TextUtils.isEmpty(text2) || TextUtils.isEmpty(text3) || TextUtils.isEmpty(text4)) {
+                Toast.makeText(this, "输入内容不能为空!", Toast.LENGTH_SHORT).show();
+            } else {
+                content = text0 + "," + text1 + "," + text2 + "," + text3 + "," + text4 + "," + text5;
+            }
+        } else if (strings.length == types.length) {//7个内容
+            String text0 = content0.getText().toString().trim();
+            String text1 = content1.getText().toString().trim();
+            String text2 = content2.getText().toString().trim();
+            String text3 = content3.getText().toString().trim();
+            String text4 = content4.getText().toString().trim();
+            String text5 = content5.getText().toString().trim();
+            String text6 = content6.getText().toString().trim();//备注输入框
+            //判空的时候不判断备注,因为备注不是必填的
+            if (TextUtils.isEmpty(text0) || TextUtils.isEmpty(text1) || TextUtils.isEmpty(text2) || TextUtils.isEmpty(text3) || TextUtils.isEmpty(text4) || TextUtils.isEmpty(text5)) {
+                Toast.makeText(this, "输入内容不能为空!", Toast.LENGTH_SHORT).show();
+            } else {
+                content = text0 + "," + text1 + "," + text2 + "," + text3 + "," + text4 + "," + text5 + "," + text6;
+            }
+        }
+        return content;
     }
 }

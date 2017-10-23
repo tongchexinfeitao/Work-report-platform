@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RelativeLayout networkLayout;
     private SharedPreferences networkSP;
     private RadioGroup radioGroup;
+    private NetworkBroadcastReceiver broadcastReceiver;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -73,8 +74,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         viewpager.setScroll(false);
         //注册监听网络状态的广播
         IntentFilter intent = new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION);
-        this.registerReceiver(new NetworkBroadcastReceiver(), intent);
+        broadcastReceiver = new NetworkBroadcastReceiver();
+        this.registerReceiver(broadcastReceiver, intent);
+        //点击事件
+        onClickListener();
 
+
+    }
+
+    private void onClickListener() {
         //设置radioGroup监听,选中的radioButton颜色变红
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -89,7 +97,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-
     }
 
     @Override
@@ -193,5 +200,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //注销广播
+        unregisterReceiver(broadcastReceiver);
+        if (list != null) {
+            list.clear();
+            list = null;
+        }
+    }
 }

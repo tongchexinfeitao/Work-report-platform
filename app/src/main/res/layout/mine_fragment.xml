@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="我的"
-            android:textColor="@color/white"
+            android:textColor="#f77605"
             android:textSize="25sp"
             android:textStyle="bold" />
 

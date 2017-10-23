@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="通知"
-            android:textColor="@color/white"
+            android:textColor="#f77605"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -26,7 +26,7 @@
             android:padding="5dp"
             android:text="全选"
             android:textColor="@color/white"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
         <!--android:textColor="@drawable/select_all_selector"-->
 
     </RelativeLayout>
@@ -67,13 +67,18 @@
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
+            android:background="@mipmap/gouback"
             android:text="发送" />
 
         <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
             android:layout_weight="1"
+            android:background="@mipmap/gouback"
             android:text="逐级发送" />
     </LinearLayout>
 </LinearLayout>
