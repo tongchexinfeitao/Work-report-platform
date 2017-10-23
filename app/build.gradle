@@ -17,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs','src/main/jniLibs']
+        }
+    }
+
+
 }
 
 dependencies {
@@ -38,8 +46,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-    compile 'com.android.support:recyclerview-v7:+'
-
-    compile 'com.github.wangchengen:LocationLibrary:3.1'
-
+    compile files('libs/BaiduLBS_Android.jar')
+//    compile 'com.github.wangchengen:LocationLibrary:3.1'
 }
