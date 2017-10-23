@@ -26,7 +26,7 @@
         android:gravity="center"
         android:text="移动1506A精英团队开发"
         android:textStyle="bold"
-        android:textColor="@android:color/white"
+        android:textColor="#f77605"
         android:textSize="22sp" />
 
 

@@ -8,6 +8,8 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import static android.R.attr.radius;
+
 /**
  * 作者: 赵虔
  * 时间: 2017/10/22
@@ -29,11 +31,20 @@ public class MyCircleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        paint.setColor(Color.parseColor("#87cefa"));
         int radius = (getWidth() / 2);
-        canvas.drawCircle(radius, radius, radius, paint);
 
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        //画外层的大圆圈
+        paint.setColor(Color.parseColor("#D4E4FD"));
+        paint.setStyle(Paint.Style.STROKE);
+        paint.setStrokeWidth(20);
+        canvas.drawCircle(radius, radius, radius - 10, paint);
+
+        paint.setStyle(Paint.Style.FILL_AND_STROKE);
+        paint.setColor(Color.parseColor("#5E97F6"));
+        canvas.drawCircle(radius, radius, radius - 30, paint);
+
+        paint.reset();
         paint.setColor(Color.WHITE);
         paint.setTextSize(70);
         if (name.length() > 4)
