@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
-        getWindow().setStatusBarColor(getResources().getColor(R.color.lanse));
+//        getWindow().setStatusBarColor(getResources().getColor(R.color.lanse));
         setContentView(R.layout.activity_main);
         initView();
         //保存网络状态的SharedPreferences

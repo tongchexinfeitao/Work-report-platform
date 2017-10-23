@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="38dp"
         android:background="@color/lanse">
 
 
@@ -14,6 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginBottom="3dp"
             android:text="通知"
             android:textColor="#f77605"
             android:textSize="25sp"
@@ -28,14 +29,8 @@
             android:text="全选"
             android:textColor="@color/white"
             android:textSize="20sp" />
-        <!--android:textColor="@drawable/select_all_selector"-->
 
     </RelativeLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#000000" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -52,7 +47,7 @@
             android:button="@null"
             android:checked="true"
             android:gravity="center"
-            android:text="发送通知"
+            android:text="汇报"
             android:textSize="22sp" />
 
         <RadioButton
@@ -64,7 +59,7 @@
             android:background="@drawable/report_button"
             android:button="@null"
             android:gravity="center"
-            android:text="收到的通知"
+            android:text="查询汇报"
             android:textSize="22sp" />
     </RadioGroup>
 
@@ -72,7 +67,8 @@
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"/>
+        android:layout_weight="1">
 
+    </FrameLayout>
 
 </LinearLayout>

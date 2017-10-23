@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="38dp"
         android:background="@color/lanse">
 
         <TextView
@@ -15,243 +15,250 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="3dp"
             android:textColor="#f77605"
             android:textSize="25sp"
             android:textStyle="bold" />
     </RelativeLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:background="@drawable/edittext_border"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
 
         <LinearLayout
-            android:id="@+id/layout0"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/edittext_style01"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/name0"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/layout0"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
-            <EditText
-                android:id="@+id/content0"
+                <TextView
+                    android:id="@+id/name0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/content6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/edittext_style01"
+                    android:paddingLeft="5dp" />
+
+            </LinearLayout>
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
+                android:layout_marginTop="5dp"
+                android:text="注:以上表格除备注外,均不能为空!"
+                android:textColor="#ff0000" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/content1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/commit"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_style02"
+                    android:text="提交"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/gouBack"
+                    android:layout_width="110dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_style01"
+                    android:text="返回"
+                    android:textSize="20sp" />
+            </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/content2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/content3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/content4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/content5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layout6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/name6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="10dp"
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/content6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="2dp"
-                android:background="@drawable/edittext_border"
-                android:paddingLeft="5dp" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"
-            android:text="注:以上表格除备注外,均不能为空!"
-            android:textColor="#ff0000" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/commit"
-                android:layout_width="110dp"
-                android:layout_height="35dp"
-                android:layout_marginRight="10dp"
-                android:background="@mipmap/queding"
-                android:text="提交"
-                android:textSize="20sp" />
-
-            <Button
-                android:id="@+id/gouBack"
-                android:layout_width="110dp"
-                android:layout_height="35dp"
-                android:layout_marginLeft="10dp"
-                android:background="@mipmap/gouback"
-                android:text="返回"
-                android:textSize="20sp" />
-        </LinearLayout>
-    </LinearLayout>
-
+    </ScrollView>
 
 </LinearLayout>

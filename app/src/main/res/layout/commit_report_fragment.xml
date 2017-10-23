@@ -14,10 +14,10 @@
             android:id="@+id/dayReport"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@mipmap/queding"
+            android:background="@drawable/button_style01"
             android:text="日汇报"
             android:textSize="20sp" />
 
@@ -26,7 +26,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@mipmap/queding"
+            android:background="@drawable/button_style01"
             android:text="例会汇报"
             android:textSize="20sp" />
 
@@ -35,9 +35,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:background="@mipmap/queding"
+            android:background="@drawable/button_style01"
             android:text="活动汇报"
             android:textSize="20sp" />
     </LinearLayout>
