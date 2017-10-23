@@ -19,6 +19,14 @@
         </android.support.v7.widget.RecyclerView>
     </ScrollView>
 
+    <TextView
+        android:id="@+id/tv_warning"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="！请先输入要发送通知的内容"
+        android:gravity="center_horizontal"
+        android:textColor="@color/red"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +43,7 @@
             android:textSize="16sp" />
 
         <EditText
-            android:id="@+id/remark"
+            android:id="@+id/et_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
