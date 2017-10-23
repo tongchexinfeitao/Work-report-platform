@@ -44,13 +44,13 @@ public class MyCircleView extends View {
         paint.setColor(Color.parseColor("#5E97F6"));
         canvas.drawCircle(radius, radius, radius - 30, paint);
 
-        paint.reset();
+        /*paint.reset();
         paint.setColor(Color.WHITE);
         paint.setTextSize(70);
         if (name.length() > 4)
             canvas.drawText(name, radius / 4 - 13, radius + 20, paint);
         else
-            canvas.drawText(name, radius / 3 + 8, radius + 20, paint);
+            canvas.drawText(name, radius / 3 + 8, radius + 20, paint);*/
     }
 
     public void setText(String text) {

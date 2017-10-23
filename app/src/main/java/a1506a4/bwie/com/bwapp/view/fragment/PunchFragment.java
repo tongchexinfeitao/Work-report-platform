@@ -56,9 +56,9 @@ public class PunchFragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         initView();
-        //设置两个自定义圆里面文字的内容
+        /*//设置两个自定义圆里面文字的内容
         circleViewLeft.setText("上下班打卡");
-        circleViewRight.setText("出差打卡");
+        circleViewRight.setText("出差打卡");*/
 
         //查看是否获得定位的权限
         canLocation = PermissionManager.CanLocation(getActivity());
