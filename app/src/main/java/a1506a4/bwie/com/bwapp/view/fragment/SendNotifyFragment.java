@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import a1506a4.bwie.com.bwapp.R;
+import a1506a4.bwie.com.bwapp.view.adapter.MyRecyclerViewAdapter;
 
 /**
  * Created by Shadow on 2017/10/13.
@@ -46,6 +48,9 @@ public class SendNotifyFragment extends Fragment implements View.OnClickListener
 
         btn_send_notification.setOnClickListener(this);
         btn_sendAll_notification.setOnClickListener(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(new MyRecyclerViewAdapter());
     }
 
     @Override
