@@ -30,8 +30,9 @@
             android:gravity="center_vertical"
             android:padding="5dp"
             android:text="全选"
-            android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:clickable="true"
+            android:textColor="@drawable/select_all_selector"
+            android:textSize="19sp" />
 
     </RelativeLayout>
 
