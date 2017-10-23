@@ -20,6 +20,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/tv_selectAll"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -31,54 +32,47 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="1dp"
+        android:background="#000000" />
 
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="区域经理A" />
-
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="区域经理B" />
-
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="区域经理C" />
-
-        <CheckBox
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="区域经理D" />
-
-    </LinearLayout>
-
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:orientation="horizontal">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="5dp"
+        <RadioButton
+            android:id="@+id/reportButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="1dp"
             android:layout_weight="1"
-            android:background="@mipmap/gouback"
-            android:text="发送" />
+            android:background="@drawable/report_button"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="发送通知"
+            android:textSize="22sp" />
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+        <RadioButton
+            android:id="@+id/selectButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="1dp"
             android:layout_weight="1"
-            android:background="@mipmap/gouback"
-            android:text="逐级发送" />
-    </LinearLayout>
+            android:background="@drawable/report_button"
+            android:button="@null"
+            android:gravity="center"
+            android:text="收到的通知"
+            android:textSize="22sp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
 </LinearLayout>

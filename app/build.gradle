@@ -38,6 +38,8 @@ dependencies {
     testCompile 'junit:junit:4.12'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
+    compile 'com.android.support:recyclerview-v7:+'
+
     compile 'com.github.wangchengen:LocationLibrary:3.1'
 
 }
