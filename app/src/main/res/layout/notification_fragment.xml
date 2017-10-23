@@ -50,7 +50,7 @@
             android:button="@null"
             android:checked="true"
             android:gravity="center"
-            android:text="汇报"
+            android:text="发送通知"
             android:textSize="22sp" />
 
         <RadioButton
@@ -62,7 +62,7 @@
             android:background="@drawable/report_button"
             android:button="@null"
             android:gravity="center"
-            android:text="查询汇报"
+            android:text="收到的通知"
             android:textSize="22sp" />
     </RadioGroup>
 
